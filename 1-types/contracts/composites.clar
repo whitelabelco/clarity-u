@@ -3,9 +3,22 @@
 ;; wraps a type and can either be none or a value of that type
 
 
+
 ;; Example
+(some u5)
+(some "optional containing astring")
+(some 'ST1HTBVD3JG9C05J7HBJTHGR0GGW7KXW28M5JS8QE)
+none
+
+;; optional results
 (element-at (list 4 8 15 16 23 42) u5) ;; Returns 42
 (element-at (list 4 8 15 16 23 42) u5000) ;; Returns none
+
+;; optional unwrapping
+(unwrap-panic (some u10))
+(unwrap-panic none)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;; TUPLES
 
@@ -33,10 +46,17 @@
     {score: u50}
 ) ;; Returns {id: u6, score: u50}
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
 ;; RESPONSES
 
 ;; response takes the concrete form of either (ok ...) or (err ...)
 (ok true)
 (err u5)
+
+;; calling a function and returning ok response or err response
+(define-public (hello (input uint))
+    (ok input)
+)
 
 
