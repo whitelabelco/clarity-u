@@ -6,6 +6,9 @@
 ;; constant values are unchageable, commonly used to store the principal that deployed the contract and for errors
 ;; syntax
 ;; (define-constant constant-name expression)
+(define-constant contract-owner tx-sender)
+(define-constant err-contract-owner-only u100)
+
 (define-constant my-constant "This is a constant value")
 ;; allows us to print to the screen in repl
 (print my-constant)
