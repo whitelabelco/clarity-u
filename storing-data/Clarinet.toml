@@ -1,0 +1,11 @@
+[project]
+name = "storing-data"
+authors = []
+description = ""
+telemetry = true
+requirements = []
+analysis = ["check_checker"]
+costs_version = 2
+[contracts.storing-data]
+path = "contracts/storing-data.clar"
+depends_on = []
