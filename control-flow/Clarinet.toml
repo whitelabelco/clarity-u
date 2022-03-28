@@ -1,0 +1,11 @@
+[project]
+name = "control-flow"
+authors = []
+description = ""
+telemetry = true
+requirements = []
+analysis = ["check_checker"]
+costs_version = 2
+[contracts.control-flow]
+path = "contracts/control-flow.clar"
+depends_on = []
