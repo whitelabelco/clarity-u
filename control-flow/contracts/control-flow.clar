@@ -50,22 +50,6 @@
 ;; this will result in an exit without information and is why typically it's not a good idea to use panic
 
 
-;;takes a response and a throw value, if the input is an error it returns the wrapped value otherwise it returns the throw value and exits
-(define-public (unwrap-err-example (input (response uint uint)))
-  (begin
-    (unwrap-err! input (ok "response ok"))
-    (err input)
-  )
-)
-
-;;(contract-call? .control-flow unwrap-err-example (ok u2))
-;;(contract-call? .control-flow unwrap-err-example (err u1))
-
-
-;; the input is unwrapped if its an error else a runtime error is thrown
-;; (define-public (unwrap-err-panic-example (input (response uint uint)))
-;;   (begin
-;;     (unwrap-err-panic input)
-;;     (err "end of function")
-;;   )
-;; )
+;; TODO
+;;unwrap-err
+;;unwrap-err-panic
